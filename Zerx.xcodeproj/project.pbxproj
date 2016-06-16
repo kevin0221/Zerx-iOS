@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A7F73B41D134E6200342A6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7F73B31D134E6200342A6C /* main.m */; };
+		8A7F73B71D134E6200342A6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7F73B61D134E6200342A6C /* AppDelegate.m */; };
+		8A7F73BD1D134E6200342A6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7F73BB1D134E6200342A6C /* Main.storyboard */; };
+		8A7F73C01D134E6200342A6C /* Zerx.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8A7F73BE1D134E6200342A6C /* Zerx.xcdatamodeld */; };
+		8A7F73C21D134E6200342A6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A7F73C11D134E6200342A6C /* Assets.xcassets */; };
+		8A7F73C51D134E6200342A6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7F73C31D134E6200342A6C /* LaunchScreen.storyboard */; };
+		8A7F73D01D134E6200342A6C /* ZerxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7F73CF1D134E6200342A6C /* ZerxTests.m */; };
+		8A7F73DB1D134E6200342A6C /* ZerxUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7F73DA1D134E6200342A6C /* ZerxUITests.m */; };
+		8A7F73EA1D13508C00342A6C /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A7F73E91D13508C00342A6C /* background.png */; };
+		8A7F73EE1D1352C500342A6C /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7F73ED1D1352C500342A6C /* LoginVC.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8A7F73CC1D134E6200342A6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A7F73A71D134E6100342A6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A7F73AE1D134E6100342A6C;
+			remoteInfo = Zerx;
+		};
+		8A7F73D71D134E6200342A6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A7F73A71D134E6100342A6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A7F73AE1D134E6100342A6C;
+			remoteInfo = Zerx;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8A7F73AF1D134E6100342A6C /* Zerx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zerx.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A7F73B31D134E6200342A6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8A7F73B51D134E6200342A6C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8A7F73B61D134E6200342A6C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8A7F73BC1D134E6200342A6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A7F73BF1D134E6200342A6C /* Zerx.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Zerx.xcdatamodel; sourceTree = "<group>"; };
+		8A7F73C11D134E6200342A6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A7F73C41D134E6200342A6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8A7F73C61D134E6200342A6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A7F73CB1D134E6200342A6C /* ZerxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZerxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A7F73CF1D134E6200342A6C /* ZerxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZerxTests.m; sourceTree = "<group>"; };
+		8A7F73D11D134E6200342A6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A7F73D61D134E6200342A6C /* ZerxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZerxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A7F73DA1D134E6200342A6C /* ZerxUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZerxUITests.m; sourceTree = "<group>"; };
+		8A7F73DC1D134E6200342A6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A7F73E91D13508C00342A6C /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = images/background.png; sourceTree = "<group>"; };
+		8A7F73EC1D1352C500342A6C /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginVC.h; path = ViewControllers/LoginVC.h; sourceTree = "<group>"; };
+		8A7F73ED1D1352C500342A6C /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginVC.m; path = ViewControllers/LoginVC.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A7F73AC1D134E6100342A6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A7F73C81D134E6200342A6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A7F73D31D134E6200342A6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A7F73A61D134E6100342A6C = {
+			isa = PBXGroup;
+			children = (
+				8A7F73B11D134E6200342A6C /* Zerx */,
+				8A7F73CE1D134E6200342A6C /* ZerxTests */,
+				8A7F73D91D134E6200342A6C /* ZerxUITests */,
+				8A7F73B01D134E6100342A6C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A7F73B01D134E6100342A6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A7F73AF1D134E6100342A6C /* Zerx.app */,
+				8A7F73CB1D134E6200342A6C /* ZerxTests.xctest */,
+				8A7F73D61D134E6200342A6C /* ZerxUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A7F73B11D134E6200342A6C /* Zerx */ = {
+			isa = PBXGroup;
+			children = (
+				8A7F73EB1D13526E00342A6C /* ViewControllers */,
+				8A7F73E81D13507B00342A6C /* images */,
+				8A7F73B51D134E6200342A6C /* AppDelegate.h */,
+				8A7F73B61D134E6200342A6C /* AppDelegate.m */,
+				8A7F73BB1D134E6200342A6C /* Main.storyboard */,
+				8A7F73C11D134E6200342A6C /* Assets.xcassets */,
+				8A7F73C31D134E6200342A6C /* LaunchScreen.storyboard */,
+				8A7F73C61D134E6200342A6C /* Info.plist */,
+				8A7F73BE1D134E6200342A6C /* Zerx.xcdatamodeld */,
+				8A7F73B21D134E6200342A6C /* Supporting Files */,
+			);
+			path = Zerx;
+			sourceTree = "<group>";
+		};
+		8A7F73B21D134E6200342A6C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A7F73B31D134E6200342A6C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8A7F73CE1D134E6200342A6C /* ZerxTests */ = {
+			isa = PBXGroup;
+			children = (
+				8A7F73CF1D134E6200342A6C /* ZerxTests.m */,
+				8A7F73D11D134E6200342A6C /* Info.plist */,
+			);
+			path = ZerxTests;
+			sourceTree = "<group>";
+		};
+		8A7F73D91D134E6200342A6C /* ZerxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8A7F73DA1D134E6200342A6C /* ZerxUITests.m */,
+				8A7F73DC1D134E6200342A6C /* Info.plist */,
+			);
+			path = ZerxUITests;
+			sourceTree = "<group>";
+		};
+		8A7F73E81D13507B00342A6C /* images */ = {
+			isa = PBXGroup;
+			children = (
+				8A7F73E91D13508C00342A6C /* background.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		8A7F73EB1D13526E00342A6C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8A7F73EC1D1352C500342A6C /* LoginVC.h */,
+				8A7F73ED1D1352C500342A6C /* LoginVC.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A7F73AE1D134E6100342A6C /* Zerx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A7F73DF1D134E6200342A6C /* Build configuration list for PBXNativeTarget "Zerx" */;
+			buildPhases = (
+				8A7F73AB1D134E6100342A6C /* Sources */,
+				8A7F73AC1D134E6100342A6C /* Frameworks */,
+				8A7F73AD1D134E6100342A6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Zerx;
+			productName = Zerx;
+			productReference = 8A7F73AF1D134E6100342A6C /* Zerx.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8A7F73CA1D134E6200342A6C /* ZerxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A7F73E21D134E6200342A6C /* Build configuration list for PBXNativeTarget "ZerxTests" */;
+			buildPhases = (
+				8A7F73C71D134E6200342A6C /* Sources */,
+				8A7F73C81D134E6200342A6C /* Frameworks */,
+				8A7F73C91D134E6200342A6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A7F73CD1D134E6200342A6C /* PBXTargetDependency */,
+			);
+			name = ZerxTests;
+			productName = ZerxTests;
+			productReference = 8A7F73CB1D134E6200342A6C /* ZerxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8A7F73D51D134E6200342A6C /* ZerxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A7F73E51D134E6200342A6C /* Build configuration list for PBXNativeTarget "ZerxUITests" */;
+			buildPhases = (
+				8A7F73D21D134E6200342A6C /* Sources */,
+				8A7F73D31D134E6200342A6C /* Frameworks */,
+				8A7F73D41D134E6200342A6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A7F73D81D134E6200342A6C /* PBXTargetDependency */,
+			);
+			name = ZerxUITests;
+			productName = ZerxUITests;
+			productReference = 8A7F73D61D134E6200342A6C /* ZerxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A7F73A71D134E6100342A6C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = kevin;
+				TargetAttributes = {
+					8A7F73AE1D134E6100342A6C = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					8A7F73CA1D134E6200342A6C = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 8A7F73AE1D134E6100342A6C;
+					};
+					8A7F73D51D134E6200342A6C = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 8A7F73AE1D134E6100342A6C;
+					};
+				};
+			};
+			buildConfigurationList = 8A7F73AA1D134E6100342A6C /* Build configuration list for PBXProject "Zerx" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8A7F73A61D134E6100342A6C;
+			productRefGroup = 8A7F73B01D134E6100342A6C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A7F73AE1D134E6100342A6C /* Zerx */,
+				8A7F73CA1D134E6200342A6C /* ZerxTests */,
+				8A7F73D51D134E6200342A6C /* ZerxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A7F73AD1D134E6100342A6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A7F73C51D134E6200342A6C /* LaunchScreen.storyboard in Resources */,
+				8A7F73EA1D13508C00342A6C /* background.png in Resources */,
+				8A7F73C21D134E6200342A6C /* Assets.xcassets in Resources */,
+				8A7F73BD1D134E6200342A6C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A7F73C91D134E6200342A6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A7F73D41D134E6200342A6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A7F73AB1D134E6100342A6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A7F73B71D134E6200342A6C /* AppDelegate.m in Sources */,
+				8A7F73C01D134E6200342A6C /* Zerx.xcdatamodeld in Sources */,
+				8A7F73EE1D1352C500342A6C /* LoginVC.m in Sources */,
+				8A7F73B41D134E6200342A6C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A7F73C71D134E6200342A6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A7F73D01D134E6200342A6C /* ZerxTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A7F73D21D134E6200342A6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A7F73DB1D134E6200342A6C /* ZerxUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8A7F73CD1D134E6200342A6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A7F73AE1D134E6100342A6C /* Zerx */;
+			targetProxy = 8A7F73CC1D134E6200342A6C /* PBXContainerItemProxy */;
+		};
+		8A7F73D81D134E6200342A6C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A7F73AE1D134E6100342A6C /* Zerx */;
+			targetProxy = 8A7F73D71D134E6200342A6C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8A7F73BB1D134E6200342A6C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A7F73BC1D134E6200342A6C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8A7F73C31D134E6200342A6C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A7F73C41D134E6200342A6C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8A7F73DD1D134E6200342A6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A7F73DE1D134E6200342A6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A7F73E01D134E6200342A6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Zerx/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zerx.Zerx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8A7F73E11D134E6200342A6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Zerx/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zerx.Zerx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8A7F73E31D134E6200342A6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZerxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zerx.ZerxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zerx.app/Zerx";
+			};
+			name = Debug;
+		};
+		8A7F73E41D134E6200342A6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZerxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zerx.ZerxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zerx.app/Zerx";
+			};
+			name = Release;
+		};
+		8A7F73E61D134E6200342A6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZerxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zerx.ZerxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Zerx;
+			};
+			name = Debug;
+		};
+		8A7F73E71D134E6200342A6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZerxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zerx.ZerxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Zerx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A7F73AA1D134E6100342A6C /* Build configuration list for PBXProject "Zerx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A7F73DD1D134E6200342A6C /* Debug */,
+				8A7F73DE1D134E6200342A6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A7F73DF1D134E6200342A6C /* Build configuration list for PBXNativeTarget "Zerx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A7F73E01D134E6200342A6C /* Debug */,
+				8A7F73E11D134E6200342A6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A7F73E21D134E6200342A6C /* Build configuration list for PBXNativeTarget "ZerxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A7F73E31D134E6200342A6C /* Debug */,
+				8A7F73E41D134E6200342A6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A7F73E51D134E6200342A6C /* Build configuration list for PBXNativeTarget "ZerxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A7F73E61D134E6200342A6C /* Debug */,
+				8A7F73E71D134E6200342A6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8A7F73BE1D134E6200342A6C /* Zerx.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8A7F73BF1D134E6200342A6C /* Zerx.xcdatamodel */,
+			);
+			currentVersion = 8A7F73BF1D134E6200342A6C /* Zerx.xcdatamodel */;
+			path = Zerx.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8A7F73A71D134E6100342A6C /* Project object */;
+}
