@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginVC : UIViewController
+@interface LoginVC : UIViewController <UITextFieldDelegate, UIAlertViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UILabel *lblNavTitle;
+
+@property (weak, nonatomic) IBOutlet UITextField *txtUsername;
+@property (weak, nonatomic) IBOutlet UIView *usernameLine;
+@property (weak, nonatomic) IBOutlet UITextField *txtPassword;
+@property (weak, nonatomic) IBOutlet UIView *passwordLine;
+
+@property (weak, nonatomic) IBOutlet UIButton *btnLogin;
+
+- (IBAction)onLogin:(id)sender;
+- (IBAction)onForgotPasswordButton:(id)sender;
+- (IBAction)onForgotUsernameButton:(id)sender;
 
 @end
