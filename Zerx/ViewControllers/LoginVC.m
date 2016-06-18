@@ -7,6 +7,7 @@
 //
 
 #import "LoginVC.h"
+#import "HomeVC.h"
 
 @interface LoginVC ()
 
@@ -14,13 +15,24 @@
 
 @implementation LoginVC
 
+@synthesize txtUsername;
+@synthesize txtPassword;
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    appData = [ApplicationData sharedInstance];
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+-(void)viewWillLayoutSubviews
+{
+    self.navigationController.navigationBarHidden = YES;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -28,9 +40,6 @@
     [super viewWillAppear:animated];
     
     CGSize screenSize = [UIScreen mainScreen].bounds.size;
-    
-    float titleFontSize = 72 * screenSize.height / 1920.0f;
-    self.lblNavTitle.font = [UIFont systemFontOfSize:titleFontSize weight:0.3f];
     
     UIColor *lineColor = [UIColor colorWithRed:30/255.0f green:60/255.0f blue:160/255.0f alpha:1.0];
     self.usernameLine.backgroundColor = lineColor;
@@ -41,21 +50,27 @@
     self.btnLogin.layer.cornerRadius = 3.0f;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 #pragma mark - button events
 
 - (IBAction)onLogin:(id)sender
 {
-    
+    if ([appData connectedToNetwork])
+    {
+        txtPassword.text = [txtPassword.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        
+        if ([txtUsername.text length] == 0 || [txtPassword.text length] == 0)
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Please enter valid username and password." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+            return;
+        }
+        else
+        {
+            [self LoginMethod:txtUsername.text Password:txtPassword.text];
+            [[NSUserDefaults standardUserDefaults] setValue:@"0" forKey:@"googleSignIn"];
+        }
+    }
 }
 
 - (IBAction)onForgotPasswordButton:(id)sender
@@ -76,6 +91,13 @@
     [alert show];
 }
 
+
+-(void)LoginMethod:(NSString *)Email Password:(NSString *)password
+{
+    HomeVC *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 #pragma mark - UIAlertView delegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
@@ -83,15 +105,27 @@
         if (buttonIndex == 0) {
             UITextField *txtField = [alertView textFieldAtIndex:0];
             NSString *strEmail = txtField.text;
+            
+            if(![appData validateEmail:strEmail])
+            {
+                [appData ShowAlert:@"Error" andMessage:@"Invalid Email!"];
+            } else {
+                
+            }
         }
     }
     if (alertView.tag == 1002) {
         if (buttonIndex == 0) {
             UITextField *txtField = [alertView textFieldAtIndex:0];
             NSString *strEmail = txtField.text;
+            if(![appData validateEmail:strEmail])
+            {
+                [appData ShowAlert:@"Error" andMessage:@"Invalid Email!"];
+            } else {
+                
+            }
         }
     }
-    
 }
 
 #pragma mark - textfield delegate

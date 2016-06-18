@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 #import <CoreLocation/CoreLocation.h>
+#import "ApplicationData.h"
 
 @interface RegisterationVC : UIViewController <UITextFieldDelegate, UIActionSheetDelegate, CLLocationManagerDelegate>
 {
@@ -19,6 +21,7 @@
     NSString *m_strLatitude, *m_strLongitude, *m_strStreetAddress, *m_strCity, *m_strState, *m_strCountry, *m_strPostalCode;
     
     BOOL m_bEnableLocation;
+    ApplicationData *appData;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *lblNavTitle;
@@ -47,5 +50,5 @@
 - (IBAction)onGetLocation:(id)sender;
 - (IBAction)onSignup:(id)sender;
 
-- (IBAction)onBack:(id)sender;
+
 @end

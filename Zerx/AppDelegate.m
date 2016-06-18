@@ -16,7 +16,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    
+    appData = [ApplicationData sharedInstance];
+    NSLog (@"Font families: %@", [UIFont familyNames]);
+    LeftMenuViewController *leftMenu = (LeftMenuViewController*)[mainStoryboard
+                                                                 instantiateViewControllerWithIdentifier: @"LeftMenuViewController"];
+    
+    [SlideNavigationController sharedInstance].leftMenu = leftMenu;
+    [SlideNavigationController sharedInstance].menuRevealAnimationDuration = 0.5;
+    [SlideNavigationController sharedInstance].portraitSlideOffset = 100;
+    
+    [[UINavigationBar appearance] setTintColor:[UIColor lightGrayColor]];
+    
+    
     return YES;
 }
 

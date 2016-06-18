@@ -18,17 +18,43 @@
 
 @implementation RegisterationVC
 
+@synthesize txtUsername;
+@synthesize txtEmail;
+@synthesize txtPassword;
+@synthesize txtConfirmPassword;
+@synthesize btnBirthdate;
+@synthesize txtNameOnCard;
+@synthesize txtStreet;
+@synthesize txtCity;
+@synthesize txtState;
+@synthesize txtZip;
+@synthesize txtCardNumber;
+@synthesize txtSecurityCode;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    appData = [ApplicationData sharedInstance];
+    self.navigationController.navigationBarHidden = NO;
+    [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back.png"] style:UIBarButtonItemStylePlain target:self action:@selector(btnBackPressed)]];
+    
+    UILabel *lblTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
+    lblTitle.backgroundColor = [UIColor clearColor];
+    lblTitle.font = [UIFont fontWithName:ROBOTO_REGULAR size:18.0];
+    lblTitle.text = @"Create New Account";
+    lblTitle.textAlignment = NSTextAlignmentCenter;
+    lblTitle.textColor = [UIColor darkGrayColor];
+    [self.navigationItem setTitleView:lblTitle];
     
     m_bEnableLocation = YES;
     [self startGeoLocation];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
+-(void)viewWillLayoutSubviews
+{
+    self.navigationController.navigationBarHidden = NO;
 }
+
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -124,7 +150,7 @@
 {
     if (m_bEnableLocation == NO)
     {
-        [self showDefaultAlert:@"Connection Error" message:@"Cannot get your address!"];
+        [appData ShowAlert:@"Connection Error" andMessage:@"Cannot get your address!"];
         return;
     }
     
@@ -160,8 +186,7 @@
             NSLog(@"%@", error.debugDescription);
             progressHUD.hidden = YES;
             
-            [self showDefaultAlert:@"Connection Error" message:@"Cannot get your address!"];
-            
+            [appData ShowAlert:@"Connection Error" andMessage:@"Cannot get your address!"];
         }
     }];
 }
@@ -175,10 +200,19 @@
     
 }
 
-- (IBAction)onSignup:(id)sender {
+- (IBAction)onSignup:(id)sender
+{
+    
+    if ([txtUsername.text length] == 0 || [txtEmail.text length] == 0 || [txtPassword.text length] == 0 || [txtConfirmPassword.text length] == 0 || [btnBirthdate.titleLabel.text length] == 0 || [txtNameOnCard.text length] == 0 || [txtStreet.text length] == 0 || [txtCity.text length] == 0 || [txtState.text length] == 0 || [txtZip.text length] == 0 || [txtCardNumber.text length] == 0 || [txtSecurityCode.text length] == 0)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Registration Error" message:@"All field are required to complete registration" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
 }
 
-- (IBAction)onBack:(id)sender {
+- (void)btnBackPressed
+{
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -258,7 +292,7 @@
     
     NSString *strSelectedDate = [defaultFormatter stringFromDate:datePicker.date];
     if ([self getOld:strSelectedDate] < 16) {
-        [self showDefaultAlert:@"Error" message:@"you must be 16 years old or older!"];
+        [appData ShowAlert:@"Error" andMessage:@"you must be 16 years old or older!"];
         return;
     }
     [self.btnBirthdate setTitle:strSelectedDate forState:UIControlStateNormal];
@@ -276,22 +310,6 @@
     NSInteger birthYear = [strDate integerValue];
   
     return currentYear - birthYear;
-}
-
--(void)showDefaultAlert:(NSString*)title message:(NSString*)message
-{
-    if([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
-    {
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
-        [alert addAction:defaultAction];
-        [self presentViewController:alert animated:YES completion:nil];
-    }
-    else
-    {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alert show];
-    }
 }
 
 #pragma mark - textfield delegate

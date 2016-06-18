@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ApplicationData.h"
 
 @interface LoginVC : UIViewController <UITextFieldDelegate, UIAlertViewDelegate>
-
-@property (weak, nonatomic) IBOutlet UILabel *lblNavTitle;
+{
+    ApplicationData *appData;
+}
 
 @property (weak, nonatomic) IBOutlet UITextField *txtUsername;
 @property (weak, nonatomic) IBOutlet UIView *usernameLine;
