@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginVC.h"
 
 @interface AppDelegate ()
 
@@ -30,7 +31,12 @@
     
     [[UINavigationBar appearance] setTintColor:[UIColor lightGrayColor]];
     
-    
+    NSString *isFirstLaunch = [[NSUserDefaults standardUserDefaults] valueForKey:@"firstlaunch"];
+    if ([isFirstLaunch isEqual:@"NO"]) {
+        UIStoryboard *mainStoryborad = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        LoginVC *vc = [mainStoryborad instantiateViewControllerWithIdentifier:@"LoginVC"];
+        [(UINavigationController*)self.window.rootViewController setViewControllers:@[vc] animated:NO];
+    }
     return YES;
 }
 

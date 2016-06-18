@@ -43,6 +43,8 @@
 		8A7F73EA1D13508C00342A6C /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A7F73E91D13508C00342A6C /* background.png */; };
 		8A7F73EE1D1352C500342A6C /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7F73ED1D1352C500342A6C /* LoginVC.m */; };
 		8A7F73F01D13925900342A6C /* back_white_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A7F73EF1D13925900342A6C /* back_white_icon.png */; };
+		8ABD06C71D15CBA700736198 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABD06C61D15CBA700736198 /* SplashViewController.m */; };
+		8ABD06C91D15CC3D00736198 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ABD06C81D15CC3D00736198 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +124,9 @@
 		8A7F73ED1D1352C500342A6C /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginVC.m; path = ViewControllers/LoginVC.m; sourceTree = "<group>"; };
 		8A7F73EF1D13925900342A6C /* back_white_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back_white_icon.png; path = images/back_white_icon.png; sourceTree = "<group>"; };
 		8A7F73F11D13949200342A6C /* RegisterationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisterationVC.h; path = ViewControllers/RegisterationVC.h; sourceTree = "<group>"; };
+		8ABD06C51D15CBA700736198 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplashViewController.h; path = ViewControllers/SplashViewController.h; sourceTree = "<group>"; };
+		8ABD06C61D15CBA700736198 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SplashViewController.m; path = ViewControllers/SplashViewController.m; sourceTree = "<group>"; };
+		8ABD06C81D15CC3D00736198 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = images/logo.png; sourceTree = "<group>"; };
 		FBD9CAD825A1E21D825BCCC9 /* Pods-Zerx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zerx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zerx/Pods-Zerx.debug.xcconfig"; sourceTree = "<group>"; };
 		FD14C825661AAE2101C71DC7 /* Pods-Zerx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zerx.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zerx/Pods-Zerx.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -310,6 +315,7 @@
 		8A7F73E81D13507B00342A6C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				8ABD06C81D15CC3D00736198 /* logo.png */,
 				8A49F79A1D14E15200561975 /* search.png */,
 				8A49F7981D14DFFF00561975 /* recommend.png */,
 				8A49F7901D148ED700561975 /* bookmarked.png */,
@@ -336,6 +342,8 @@
 				8A49F78E1D1479E500561975 /* HomeVC.m */,
 				8A49F79C1D14E24D00561975 /* RecommendMechanicVC.h */,
 				8A49F79D1D14E24D00561975 /* RecommendMechanicVC.m */,
+				8ABD06C51D15CBA700736198 /* SplashViewController.h */,
+				8ABD06C61D15CBA700736198 /* SplashViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -467,6 +475,7 @@
 				8A7F73F01D13925900342A6C /* back_white_icon.png in Resources */,
 				8A7F73BD1D134E6200342A6C /* Main.storyboard in Resources */,
 				8A49F7811D146C1D00561975 /* RobotoCondensed-Regular.ttf in Resources */,
+				8ABD06C91D15CC3D00736198 /* logo.png in Resources */,
 				8A49F7961D148ED700561975 /* settings.png in Resources */,
 				8A49F7941D148ED700561975 /* bookmarked.png in Resources */,
 				8A49F7801D146C1D00561975 /* Roboto-Thin.ttf in Resources */,
@@ -556,6 +565,7 @@
 				8A49F78A1D146D0300561975 /* User.m in Sources */,
 				8A7F73B41D134E6200342A6C /* main.m in Sources */,
 				8A49F79E1D14E24D00561975 /* RecommendMechanicVC.m in Sources */,
+				8ABD06C71D15CBA700736198 /* SplashViewController.m in Sources */,
 				8A49F76A1D145A0A00561975 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 				8A49F76D1D145A0A00561975 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				8A49F76C1D145A0A00561975 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,

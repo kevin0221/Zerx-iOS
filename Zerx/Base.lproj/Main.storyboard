@@ -3,9 +3,204 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="P18-YH-kuu">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" id="WMU-2N-AjT" customClass="SplashViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q3L-pz-bju"/>
+                        <viewControllerLayoutGuide type="bottom" id="O1Y-Ob-FtM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b2U-kO-mZ7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gkr-nP-BL6" userLabel="Content View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="RPl-lS-N4m" userLabel="background">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mv7-ez-nV1">
+                                        <rect key="frame" x="71" y="208" width="232" height="82"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Mv7-ez-nV1" secondAttribute="height" multiplier="672:237" id="mxh-Rw-VMW"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the App, Fix your car." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkf-c5-Dlr">
+                                        <rect key="frame" x="91" y="298" width="194" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="OMk-fP-NLE">
+                                        <rect key="frame" x="43" y="389" width="289" height="59"/>
+                                        <string key="text">Zerx is the smartest way to take care of your automobile. One tap and a mechanic comes directly to you. Your driver knows exactly how to fix your car. And payment is completely cashless..</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cJo-ak-HoH">
+                                        <rect key="frame" x="150" y="468" width="74" height="29"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Read More">
+                                                    <attributes>
+                                                        <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                        <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                                        <integer key="NSUnderline" value="1"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="onReadMore:" destination="WMU-2N-AjT" eventType="touchUpInside" id="yTS-L6-cxv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAa-0n-V2l">
+                                        <rect key="frame" x="26" y="549" width="323" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <state key="normal" title="I'm Ready to Get Started">
+                                            <color key="titleColor" red="1" green="0.1764705882352941" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onReady:" destination="WMU-2N-AjT" eventType="touchUpInside" id="1X1-oA-saK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="RPl-lS-N4m" firstAttribute="top" secondItem="Gkr-nP-BL6" secondAttribute="top" id="0WT-Va-eMp"/>
+                                    <constraint firstAttribute="bottom" secondItem="RPl-lS-N4m" secondAttribute="bottom" id="1Kw-vi-xtQ"/>
+                                    <constraint firstItem="OMk-fP-NLE" firstAttribute="top" secondItem="Gkr-nP-BL6" secondAttribute="bottom" multiplier="1120:1920" id="3aT-2s-Gqz"/>
+                                    <constraint firstItem="Mv7-ez-nV1" firstAttribute="height" secondItem="RPl-lS-N4m" secondAttribute="height" multiplier="237:1920" id="4gz-bi-Mx2"/>
+                                    <constraint firstItem="cJo-ak-HoH" firstAttribute="centerX" secondItem="Gkr-nP-BL6" secondAttribute="centerX" id="6Q4-gJ-NfZ"/>
+                                    <constraint firstItem="mAa-0n-V2l" firstAttribute="top" secondItem="Gkr-nP-BL6" secondAttribute="bottom" multiplier="1580:1920" id="AgA-9F-dCu"/>
+                                    <constraint firstItem="cJo-ak-HoH" firstAttribute="top" secondItem="OMk-fP-NLE" secondAttribute="bottom" constant="20" id="GZo-nO-kCE"/>
+                                    <constraint firstItem="mAa-0n-V2l" firstAttribute="height" secondItem="RPl-lS-N4m" secondAttribute="height" multiplier="130:1920" id="PvP-l3-6pZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="mAa-0n-V2l" secondAttribute="trailing" multiplier="1080:1005" id="RLY-RS-53e"/>
+                                    <constraint firstAttribute="trailing" secondItem="RPl-lS-N4m" secondAttribute="trailing" id="Wl3-4R-l4H"/>
+                                    <constraint firstItem="RPl-lS-N4m" firstAttribute="leading" secondItem="Gkr-nP-BL6" secondAttribute="leading" id="d33-HH-zpZ"/>
+                                    <constraint firstItem="OMk-fP-NLE" firstAttribute="height" secondItem="RPl-lS-N4m" secondAttribute="height" multiplier="170:1920" id="hjK-1l-lXY"/>
+                                    <constraint firstItem="gkf-c5-Dlr" firstAttribute="top" secondItem="Mv7-ez-nV1" secondAttribute="bottom" constant="8" id="jjX-Ya-nbW"/>
+                                    <constraint firstItem="Mv7-ez-nV1" firstAttribute="centerX" secondItem="Gkr-nP-BL6" secondAttribute="centerX" id="teR-jh-aeK"/>
+                                    <constraint firstItem="Mv7-ez-nV1" firstAttribute="top" secondItem="Gkr-nP-BL6" secondAttribute="bottom" multiplier="600:1920" id="uQu-ds-EC5"/>
+                                    <constraint firstItem="OMk-fP-NLE" firstAttribute="leading" secondItem="Gkr-nP-BL6" secondAttribute="trailing" multiplier="125:1080" id="uXG-f8-tlS"/>
+                                    <constraint firstItem="mAa-0n-V2l" firstAttribute="leading" secondItem="Gkr-nP-BL6" secondAttribute="trailing" multiplier="75:1080" id="ud4-XI-l4j"/>
+                                    <constraint firstAttribute="trailing" secondItem="OMk-fP-NLE" secondAttribute="trailing" multiplier="1080:955" id="wnT-Pl-AYJ"/>
+                                    <constraint firstItem="gkf-c5-Dlr" firstAttribute="centerX" secondItem="Gkr-nP-BL6" secondAttribute="centerX" id="xEd-af-E1M"/>
+                                </constraints>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QFm-8R-KRC" userLabel="ReadMore View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="ufR-zU-Tya">
+                                        <rect key="frame" x="96" y="49" width="182" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ufR-zU-Tya" secondAttribute="height" multiplier="672:237" id="vIl-Y1-UuY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doJ-wg-otK">
+                                        <rect key="frame" x="26" y="595" width="323" height="45"/>
+                                        <color key="backgroundColor" red="1" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <state key="normal" title="Get Started">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onGetStarted:" destination="WMU-2N-AjT" eventType="touchUpInside" id="Zvl-Mf-xIT"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="27" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K14-1K-Iu9">
+                                        <rect key="frame" x="26" y="160" width="323" height="359"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <mutableString key="content">Fix it anywhere, anytime.
+Weekends.  After hours. Pay less. Honest worry-free service. 
+
+Looking for a great neighborhood mechanic at a price you can afford? Tired of using “chain store” service stations and “high priced shops” where you feel like you are paying for the glitz instead of receiving honest advice about what you REALLY need?
+
+Here at Zerx’s Garage, we connect honest, hard working local mechanics with folks in their neighborhood who are looking for the auto mechanics who still LOVE working on cars...and don’t charge an arm and a leg to do it!
+
+</mutableString>
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                    <font key="NSOriginalFont" size="12" name="HelveticaNeue"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="How does it work?">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="20" name="HelveticaNeue"/>
+                                                    <font key="NSOriginalFont" size="20" name="HelveticaNeue"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment>
+                                                <string key="content">
+
+YOU get to read customers reviews of your local Zerx mechanic BEFORE you contact them. (And add your own ratings, later!) This helps you find a local mechanic that you can trust to fix your car the way you want, at a price usually less than half the price of the “big boys” down the street
+Get started....
+
+</string>
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                    <font key="NSOriginalFont" size="12" name="HelveticaNeue"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.078431372549019607" green="0.074509803921568626" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="K14-1K-Iu9" firstAttribute="leading" secondItem="QFm-8R-KRC" secondAttribute="trailing" multiplier="75:1080" id="2jJ-Wh-Hiy"/>
+                                    <constraint firstAttribute="trailing" secondItem="doJ-wg-otK" secondAttribute="trailing" multiplier="1080:1005" id="5SG-kS-a6j"/>
+                                    <constraint firstItem="ufR-zU-Tya" firstAttribute="centerX" secondItem="QFm-8R-KRC" secondAttribute="centerX" id="Qiu-LA-Rkx"/>
+                                    <constraint firstItem="doJ-wg-otK" firstAttribute="top" secondItem="QFm-8R-KRC" secondAttribute="bottom" multiplier="1712:1920" id="VZs-rA-D9a"/>
+                                    <constraint firstItem="doJ-wg-otK" firstAttribute="leading" secondItem="QFm-8R-KRC" secondAttribute="trailing" multiplier="75:1080" id="Y8p-Zt-HnS"/>
+                                    <constraint firstItem="ufR-zU-Tya" firstAttribute="height" secondItem="QFm-8R-KRC" secondAttribute="height" multiplier="184:1920" id="gnJ-xw-598"/>
+                                    <constraint firstItem="K14-1K-Iu9" firstAttribute="top" secondItem="QFm-8R-KRC" secondAttribute="bottom" multiplier="460:1920" id="kl3-Qs-1Kj"/>
+                                    <constraint firstItem="doJ-wg-otK" firstAttribute="height" secondItem="QFm-8R-KRC" secondAttribute="height" multiplier="130:1920" id="koW-XK-Zgx"/>
+                                    <constraint firstItem="ufR-zU-Tya" firstAttribute="top" secondItem="QFm-8R-KRC" secondAttribute="bottom" multiplier="142:1920" id="luO-e1-j9z"/>
+                                    <constraint firstAttribute="trailing" secondItem="K14-1K-Iu9" secondAttribute="trailing" multiplier="1080:1005" id="yuH-4C-ZHn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gkr-nP-BL6" firstAttribute="top" secondItem="b2U-kO-mZ7" secondAttribute="top" id="1Lz-Yo-8Qf"/>
+                            <constraint firstAttribute="trailing" secondItem="QFm-8R-KRC" secondAttribute="trailing" id="7kc-pu-Po1"/>
+                            <constraint firstItem="Gkr-nP-BL6" firstAttribute="leading" secondItem="b2U-kO-mZ7" secondAttribute="leading" id="BJp-bF-sAW"/>
+                            <constraint firstAttribute="bottom" secondItem="Gkr-nP-BL6" secondAttribute="bottom" id="Pt5-CJ-F7P"/>
+                            <constraint firstAttribute="bottom" secondItem="QFm-8R-KRC" secondAttribute="bottom" id="qwr-m2-YBc"/>
+                            <constraint firstItem="QFm-8R-KRC" firstAttribute="leading" secondItem="b2U-kO-mZ7" secondAttribute="leading" id="tCn-wt-GNg"/>
+                            <constraint firstAttribute="trailing" secondItem="Gkr-nP-BL6" secondAttribute="trailing" id="z2J-BJ-38w"/>
+                            <constraint firstItem="QFm-8R-KRC" firstAttribute="top" secondItem="b2U-kO-mZ7" secondAttribute="top" id="ze7-GQ-WEy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1rF-zD-FcO"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="qwr-m2-YBc" id="ynm-Mk-Wwj"/>
+                        <outlet property="btnGetStarted" destination="doJ-wg-otK" id="fQO-S9-pIg"/>
+                        <outlet property="btnReady" destination="mAa-0n-V2l" id="9kZ-hK-g5F"/>
+                        <outlet property="readMoreView" destination="QFm-8R-KRC" id="jan-FI-2b0"/>
+                        <outlet property="topConstratint" destination="ze7-GQ-WEy" id="ZMb-bE-lF9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DKf-re-xbi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="474.5" y="401.5"/>
+        </scene>
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -71,7 +266,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you have no account, " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="cm9-NF-8FU">
                                         <rect key="frame" x="43" y="479" width="193" height="17"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyb-9C-lBT">
@@ -239,7 +434,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comming soon..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzB-E7-2ym">
                                 <rect key="frame" x="33" y="118" width="168" height="59"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -523,12 +718,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Hpo-nh-Hxi"/>
+                        <segue destination="WMU-2N-AjT" kind="relationship" relationship="rootViewController" id="Lng-Zs-mVN"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hpm-6D-fyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="452" y="402"/>
+            <point key="canvasLocation" x="38.5" y="401.5"/>
         </scene>
         <!--Change PasswordVC-->
         <scene sceneID="WfK-uU-xcQ">
@@ -610,4 +805,8 @@
             <point key="canvasLocation" x="2275.5" y="1152.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background.png" width="1080" height="1920"/>
+        <image name="logo.png" width="672" height="237"/>
+    </resources>
 </document>
