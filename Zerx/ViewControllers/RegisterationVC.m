@@ -141,8 +141,6 @@
 #pragma mark - button events
 - (IBAction)onBirthdate:(id)sender
 {
-    UIColor *selectedLineColor = [UIColor colorWithRed:200/255.0f green:0 blue:0 alpha:1];
-    self.btnBirthdate.layer.borderColor = selectedLineColor.CGColor;
     [self showDatePicker:UIDatePickerModeDate];
 }
 
@@ -209,6 +207,32 @@
         [alert show];
         return;
     }
+    
+    if (![appData validateEmail:txtEmail.text])
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Email Invalid" message:@"Please enter valid email" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
+    
+    NSString *trimmed = [txtPassword.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    if (!(trimmed.length > 0))
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Password Error" message:@"Please enter valid password" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
+    
+    if (![txtPassword.text isEqualToString:txtConfirmPassword.text])
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Password Error" message:@"Password and Confirm Password must be same" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        return;
+    }
+    
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
 }
 
 - (void)btnBackPressed
@@ -265,9 +289,7 @@
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action)
                                        {
                                            NSLog(@"Cancel action");
-                                           UIColor *borderColor = [UIColor colorWithRed:30/255.0f green:60/255.0f blue:120/255.0f alpha:1];
-                                           self.btnBirthdate.layer.borderColor = borderColor.CGColor;
-                                       }];
+                                        }];
         
         
         
@@ -313,29 +335,10 @@
 }
 
 #pragma mark - textfield delegate
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
-{
-    UIColor *selectedLineColor = [UIColor colorWithRed:200/255.0f green:0 blue:0 alpha:1];
-    [UIView animateWithDuration:0.5f animations:^{
-        textField.layer.borderColor = selectedLineColor.CGColor;
-        [self.view layoutIfNeeded];
-    }];
-    return YES;
-}
-
-- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
-{
-    UIColor *lineColor = [UIColor colorWithRed:30/255.0f green:60/255.0f blue:120/255.0f alpha:1];
-    textField.layer.borderColor = lineColor.CGColor;
-    return YES;
-}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
-    UIColor *lineColor = [UIColor colorWithRed:30/255.0f green:60/255.0f blue:120/255.0f alpha:1];
-    textField.layer.borderColor = lineColor.CGColor;
-    
     return YES;
 }
 

@@ -198,7 +198,25 @@
                     <view key="view" contentMode="scaleToFill" id="dEm-YW-6iY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OUy-fr-C31" userLabel="Content View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMh-TO-jZX">
+                                        <rect key="frame" x="47" y="64" width="179" height="26"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OUy-fr-C31" firstAttribute="leading" secondItem="dEm-YW-6iY" secondAttribute="leading" id="B3W-YJ-nKc"/>
+                            <constraint firstItem="OUy-fr-C31" firstAttribute="top" secondItem="dEm-YW-6iY" secondAttribute="top" id="KRF-ul-EzC"/>
+                            <constraint firstAttribute="bottom" secondItem="OUy-fr-C31" secondAttribute="bottom" id="TkL-Vq-djp"/>
+                            <constraint firstAttribute="trailing" secondItem="OUy-fr-C31" secondAttribute="trailing" id="xNl-Hl-iSl"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
