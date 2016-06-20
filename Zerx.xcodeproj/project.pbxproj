@@ -427,6 +427,7 @@
 				TargetAttributes = {
 					8A7F73AE1D134E6100342A6C = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = ULUVMR633L;
 					};
 					8A7F73CA1D134E6200342A6C = {
 						CreatedOnToolsVersion = 7.3;
@@ -642,7 +643,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beverly Rue (ULUVMR633L)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beverly Rue (ULUVMR633L)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -664,6 +666,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "22148cb2-7a6f-4776-b365-2a5794da3114";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -687,7 +690,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beverly Rue (ULUVMR633L)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beverly Rue (ULUVMR633L)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -702,6 +706,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "22148cb2-7a6f-4776-b365-2a5794da3114";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -713,11 +718,13 @@
 			baseConfigurationReference = FBD9CAD825A1E21D825BCCC9 /* Pods-Zerx.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beverly Rue (ULUVMR633L)";
 				INFOPLIST_FILE = Zerx/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zerx.Zerx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zerx.Zerx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "22148cb2-7a6f-4776-b365-2a5794da3114";
 			};
 			name = Debug;
 		};
@@ -726,11 +733,13 @@
 			baseConfigurationReference = FD14C825661AAE2101C71DC7 /* Pods-Zerx.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beverly Rue (ULUVMR633L)";
 				INFOPLIST_FILE = Zerx/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = zerx.Zerx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zerx.Zerx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "22148cb2-7a6f-4776-b365-2a5794da3114";
 			};
 			name = Release;
 		};
