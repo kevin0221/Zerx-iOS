@@ -106,29 +106,18 @@
                                             <constraint firstAttribute="width" secondItem="ufR-zU-Tya" secondAttribute="height" multiplier="672:237" id="vIl-Y1-UuY"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doJ-wg-otK">
-                                        <rect key="frame" x="26" y="595" width="323" height="45"/>
-                                        <color key="backgroundColor" red="1" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                        <state key="normal" title="Get Started">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="onGetStarted:" destination="WMU-2N-AjT" eventType="touchUpInside" id="Zvl-Mf-xIT"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="27" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K14-1K-Iu9">
-                                        <rect key="frame" x="26" y="160" width="323" height="359"/>
+                                        <rect key="frame" x="26" y="139" width="323" height="359"/>
                                         <attributedString key="attributedText">
                                             <fragment>
-                                                <mutableString key="content">Fix it anywhere, anytime.
+                                                <string key="content">Fix it anywhere, anytime.
 Weekends.  After hours. Pay less. Honest worry-free service. 
 
 Looking for a great neighborhood mechanic at a price you can afford? Tired of using “chain store” service stations and “high priced shops” where you feel like you are paying for the glitz instead of receiving honest advice about what you REALLY need?
 
 Here at Zerx’s Garage, we connect honest, hard working local mechanics with folks in their neighborhood who are looking for the auto mechanics who still LOVE working on cars...and don’t charge an arm and a leg to do it!
 
-</mutableString>
+</string>
                                                 <attributes>
                                                     <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <font key="NSFont" size="12" name="HelveticaNeue"/>
@@ -157,7 +146,19 @@ Get started....
                                             </fragment>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
+                                        <string key="userLabel">Fix it anywhere, anytime. Weekends.  After hours. Pay less. Honest worry-free service.   Looking for a great neighborhood mechanic at a price you can afford? Tired of using “chain store” service stations and “high priced shops” where you feel like you are paying for the glitz instead of receiving honest advice about what you REALLY need?  Here at Zerx’s Garage, we connect honest, hard working local mechanics with folks in their neighborhood who are looking for the auto mechanics who still LOVE working on cars...and don’t charge an arm and a leg to do it!  How does it work?  YOU get to read customers reviews of your local Zerx mechanic BEFORE you contact them. (And add your own ratings, later!) This helps you find a local mechanic that you can trust to fix your car the way you want, at a price usually less than half the price of the “big boys” down the street Get started....</string>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doJ-wg-otK">
+                                        <rect key="frame" x="26" y="595" width="323" height="45"/>
+                                        <color key="backgroundColor" red="1" green="0.1764705882" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <state key="normal" title="Get Started">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onGetStarted:" destination="WMU-2N-AjT" eventType="touchUpInside" id="Zvl-Mf-xIT"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.078431372549019607" green="0.074509803921568626" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -167,9 +168,9 @@ Get started....
                                     <constraint firstItem="doJ-wg-otK" firstAttribute="top" secondItem="QFm-8R-KRC" secondAttribute="bottom" multiplier="1712:1920" id="VZs-rA-D9a"/>
                                     <constraint firstItem="doJ-wg-otK" firstAttribute="leading" secondItem="QFm-8R-KRC" secondAttribute="trailing" multiplier="75:1080" id="Y8p-Zt-HnS"/>
                                     <constraint firstItem="ufR-zU-Tya" firstAttribute="height" secondItem="QFm-8R-KRC" secondAttribute="height" multiplier="184:1920" id="gnJ-xw-598"/>
-                                    <constraint firstItem="K14-1K-Iu9" firstAttribute="top" secondItem="QFm-8R-KRC" secondAttribute="bottom" multiplier="460:1920" id="kl3-Qs-1Kj"/>
+                                    <constraint firstItem="K14-1K-Iu9" firstAttribute="top" secondItem="QFm-8R-KRC" secondAttribute="bottom" multiplier="400:1920" id="kl3-Qs-1Kj"/>
                                     <constraint firstItem="doJ-wg-otK" firstAttribute="height" secondItem="QFm-8R-KRC" secondAttribute="height" multiplier="130:1920" id="koW-XK-Zgx"/>
-                                    <constraint firstItem="ufR-zU-Tya" firstAttribute="top" secondItem="QFm-8R-KRC" secondAttribute="bottom" multiplier="142:1920" id="luO-e1-j9z"/>
+                                    <constraint firstItem="ufR-zU-Tya" firstAttribute="top" secondItem="QFm-8R-KRC" secondAttribute="bottom" multiplier="140:1920" id="luO-e1-j9z"/>
                                     <constraint firstAttribute="trailing" secondItem="K14-1K-Iu9" secondAttribute="trailing" multiplier="1080:1005" id="yuH-4C-ZHn"/>
                                 </constraints>
                             </view>

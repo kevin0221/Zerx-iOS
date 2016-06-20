@@ -28,7 +28,7 @@
     UILabel *lblTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
     lblTitle.backgroundColor = [UIColor clearColor];
     lblTitle.font =  [UIFont fontWithName:ROBOTO_REGULAR size:18.0];
-    lblTitle.text = @"Forget Password";
+    lblTitle.text = @"Change Password";
     lblTitle.textAlignment = NSTextAlignmentCenter;
     lblTitle.textColor = [UIColor darkGrayColor];
     
@@ -75,7 +75,7 @@
         
         if ([txtOldPassword.text length] == 0 || [txtNewPassword.text length] == 0)
         {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Forget Password Error" message:@"All field are required to change password " delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Change Password Error" message:@"All field are required to change password " delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
             [alert show];
             return;
         }
@@ -162,7 +162,7 @@
 
 -(void)btnCancelPressed
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Forgot Password" message:@"Are you sure to cancel change password process? All entered data will be lost by pressing Yes." delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No", nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Change Password" message:@"Are you sure to cancel change password process? All entered data will be lost by pressing Yes." delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No", nil];
     alert.tag = 10000;
     [alert show];
 }

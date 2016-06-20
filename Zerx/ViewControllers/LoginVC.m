@@ -39,6 +39,9 @@
 {
     [super viewWillAppear:animated];
     
+    txtUsername.text = @"";
+    txtPassword.text = @"";
+    
     CGSize screenSize = [UIScreen mainScreen].bounds.size;
     
     UIColor *lineColor = [UIColor colorWithRed:30/255.0f green:60/255.0f blue:160/255.0f alpha:1.0];
@@ -118,9 +121,9 @@
         if (buttonIndex == 0) {
             UITextField *txtField = [alertView textFieldAtIndex:0];
             NSString *strEmail = txtField.text;
-            if(![appData validateEmail:strEmail])
+            if([strEmail isEqualToString:@""])
             {
-                [appData ShowAlert:@"Error" andMessage:@"Invalid Email!"];
+                [appData ShowAlert:@"Error" andMessage:@"Invalid Username!"];
             } else {
                 
             }
@@ -184,6 +187,5 @@
     
     return YES;
 }
-
 
 @end

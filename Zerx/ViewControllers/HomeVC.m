@@ -28,7 +28,6 @@
     lblTitle.textAlignment = NSTextAlignmentCenter;
     lblTitle.textColor = [UIColor darkGrayColor];
     [self.navigationItem setTitleView:lblTitle];
-   
 }
 
 -(void)viewWillLayoutSubviews

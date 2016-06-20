@@ -230,7 +230,7 @@
         return;
     }
     
-    if (![btnBirthdate.titleLabel.text isEqualToString:@"Birthdate (16 or older)"])
+    if ([btnBirthdate.titleLabel.text isEqualToString:@"Birthdate (16 or older)"])
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Birthday Error" message:@"Please select valid birthday" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
